@@ -52,9 +52,7 @@ public void getUserInput(){
  Y = cont.getButton("Y").pressed();
  X = cont.getButton("X").pressed();
  RB = cont.getButton("RB").pressed();
- LB = cont.getButton("LB").pressed(); 
- Start = cont.getButton("Start").pressed(); 
- Back = cont.getButton("Back").pressed(); 
+ //LB = cont.getButton("LB").pressed();
  
  println(A,B,X,Y,RB,LB,Back,Start);
  println(R_JS_Horizontal ,R_JS_Vertical ,L_JS_Horizontal ,L_JS_Vertical);
