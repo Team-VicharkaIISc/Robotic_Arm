@@ -16,7 +16,6 @@ boolean A,B,X,Y,RB,LB,Back,Start;
 
 
 String string ; 
-String controllerState;
 
 
 void setup() {
@@ -53,36 +52,20 @@ public void getUserInput(){
  Y = cont.getButton("Y").pressed();
  X = cont.getButton("X").pressed();
  RB = cont.getButton("RB").pressed();
- //LB = cont.getButton("LB").pressed(); 
+ LB = cont.getButton("LB").pressed(); 
  Start = cont.getButton("Start").pressed(); 
  Back = cont.getButton("Back").pressed(); 
  
- //println(A,B,X,Y,RB,LB,Back,Start);
- //println(R_JS_Horizontal ,R_JS_Vertical ,L_JS_Horizontal ,L_JS_Vertical);
+ println(A,B,X,Y,RB,LB,Back,Start);
+ println(R_JS_Horizontal ,R_JS_Vertical ,L_JS_Horizontal ,L_JS_Vertical);
 
  
 }
 
 void draw(){
  getUserInput();
- //string = String.format("%f,%f,%f,%f,%",R_JS_Horizontal ,R_JS_Vertical ,L_JS_Horizontal ,L_JS_Vertical,A,B,X,Y,RB,LB,Back,Start);
- controllerState = String.format("A: %s, B: %s, X: %s, Y: %s, RB: %s, LB: %s, Start: %s, Back: %s, R_JS_Horizontal: %f, R_JS_Vertical: %f, L_JS_Horizontal: %f, L_JS_Vertical: %f",
-    String.valueOf(A) ,
-    String.valueOf(B),
-    String.valueOf(X),
-    String.valueOf(Y),
-    String.valueOf(RB),
-    String.valueOf(LB),
-    String.valueOf(Start),
-    String.valueOf(Back),
-    R_JS_Horizontal,
-    R_JS_Vertical,
-    L_JS_Horizontal,
-    L_JS_Vertical
-);
-
- myClient.write(controllerState); // send whatever you need to send here
- println(controllerState);
+ //string = String.format("%f,%f,%f,%f",R_JS_Horizontal ,R_JS_Vertical ,L_JS_Horizontal ,L_JS_Vertical);
+ //myClient.write(string); // send whatever you need to send here
  
  //background(thumb,100,255);
  
